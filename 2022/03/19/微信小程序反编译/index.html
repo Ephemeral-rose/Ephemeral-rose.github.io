@@ -166,7 +166,7 @@
             <div class="typo" style="padding: 3rem;">
                 <p>  最近在整理过往项目经历时，发现之前误删了社会实践时个人开发的韭等商城微信小程序项目源码。在查阅相关资料后，通过&#x3D;&#x3D;模拟器+反编译文件&#x3D;&#x3D;得到项目过程，方法如下：</p>
 <hr>
-<h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><h3 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1. 安装环境"></a>1. <strong>安装环境</strong></h3><h5 id="分别配置nodejs-微信开发者工具环境"><a href="#分别配置nodejs-微信开发者工具环境" class="headerlink" title="分别配置nodejs + 微信开发者工具环境"></a>分别配置nodejs + 微信开发者工具环境</h5><pre class="line-numbers language-tex"><code class="language-tex">// nodejs下载地址：
+<h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><h3 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1. 安装环境"></a>1. <strong>安装环境</strong></h3><h5 id="分别配置nodejs-微信开发者工具环境"><a href="#分别配置nodejs-微信开发者工具环境" class="headerlink" title="分别配置nodejs + 微信开发者工具环境"></a>分别配置nodejs + 微信开发者工具环境</h5><pre class="line-numbers language-line-numbers language-tex"><code class="language-line-numbers language-tex">// nodejs下载地址：
 https://nodejs.org/zh-cn/download/
 // 微信开发者工具下载地址：
 https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html
@@ -194,7 +194,7 @@ https://mumu.163.com/
 <ul>
 <li><h4 id="3-2-反编译程序包"><a href="#3-2-反编译程序包" class="headerlink" title="3.2 反编译程序包"></a>3.2 反编译程序包</h4></li>
 </ul>
-<pre class="line-numbers language-shell"><code class="language-shell"># 1.下载反编译程序
+<pre class="line-numbers language-line-numbers language-shell"><code class="language-line-numbers language-shell"># 1.下载反编译程序
 git clone https://gitee.com/ksd/wxappUnpacker.git
 
 # 2.安装依赖
@@ -215,7 +215,7 @@ npm install js-beautify
 
 <center><img src="https://s1.ax1x.com/2022/03/19/qEO5Is.jpg" alt="qEO5Is.jpg" style="zoom:50%;" /></center>
 
-<h5 id="反编译-wxapkg文件得到得到源码文件夹"><a href="#反编译-wxapkg文件得到得到源码文件夹" class="headerlink" title="反编译.wxapkg文件得到得到源码文件夹"></a>反编译.wxapkg文件得到得到源码文件夹</h5><pre class="line-numbers language-shell"><code class="language-shell">node wuWxapkg.js <file>
+<h5 id="反编译-wxapkg文件得到得到源码文件夹"><a href="#反编译-wxapkg文件得到得到源码文件夹" class="headerlink" title="反编译.wxapkg文件得到得到源码文件夹"></a>反编译.wxapkg文件得到得到源码文件夹</h5><pre class="line-numbers language-line-numbers language-shell"><code class="language-line-numbers language-shell">node wuWxapkg.js <file>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <center><img src="https://s1.ax1x.com/2022/03/19/qEO4aj.jpg" alt="qEO4aj.jpg" style="zoom:50%;" /></center>
 
@@ -229,10 +229,10 @@ npm install js-beautify
 </li>
 <li><h4 id="Resolve："><a href="#Resolve：" class="headerlink" title="Resolve："></a><strong>Resolve</strong>：</h4><h5 id="修改-x3D-x3D-wuWxss-js-x3D-x3D-文件代码-x3D-x3D-line-2-x3D-gt-line-3-x3D-x3D-如下："><a href="#修改-x3D-x3D-wuWxss-js-x3D-x3D-文件代码-x3D-x3D-line-2-x3D-gt-line-3-x3D-x3D-如下：" class="headerlink" title="修改&#x3D;&#x3D;wuWxss.js&#x3D;&#x3D;文件代码( &#x3D;&#x3D;line.2 &#x3D;&gt; line.3&#x3D;&#x3D; )如下："></a>修改&#x3D;&#x3D;wuWxss.js&#x3D;&#x3D;文件代码( &#x3D;&#x3D;line.2 &#x3D;&gt; line.3&#x3D;&#x3D; )如下：</h5></li>
 </ul>
-<pre class="line-numbers language-json"><code class="language-json">let vm = new VM(&amp;#<span class="token number">123</span><span class="token punctuation">;</span> sandbox<span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-// pureData = vm.run(code + <span class="token string">"\n_C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-pureData = vm.run(code + <span class="token string">"&amp;#125;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console.log(<span class="token string">"Guess wxss(first turn)..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-line-numbers language-json"><code class="language-line-numbers language-json">let vm = new VM(&#123; sandbox: &#123;&#125;&#125;)
+// pureData = vm.run(code + "\n_C");
+pureData = vm.run(code + "&#125;");
+console.log("Guess wxss(first turn)...");
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>参考文档：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/xuedingmiaojun/wxappUnpacker/issues/30">https://github.com/xuedingmiaojun/wxappUnpacker/issues/30</a></p>
