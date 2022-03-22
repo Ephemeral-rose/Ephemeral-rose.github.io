@@ -63,7 +63,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-dark.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"></head>
     
 		
 <!-- Layouts -->
@@ -71,7 +71,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_.css" />
+<link rel="stylesheet" href="/css/prism_funcky.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -168,14 +168,16 @@
 <table><tr><td bgcolor=lightgrey>
 
 <hr>
-<h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><h3 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1. 安装环境"></a>1. <strong>安装环境</strong></h3><h5 id="分别配置nodejs-微信开发者工具环境"><a href="#分别配置nodejs-微信开发者工具环境" class="headerlink" title="分别配置nodejs + 微信开发者工具环境"></a>分别配置nodejs + 微信开发者工具环境</h5><pre class=" language-tex"><code class="language-tex">// nodejs下载地址：
-https://nodejs.org/zh-cn/download/
-// 微信开发者工具下载地址：
-https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html
-</code></pre>
-<h3 id="2-安装模拟器及相关程序"><a href="#2-安装模拟器及相关程序" class="headerlink" title="2. 安装模拟器及相关程序"></a>2. <strong>安装模拟器及相关程序</strong></h3><h5 id="反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。"><a href="#反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。" class="headerlink" title="反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。"></a>反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。</h5><pre><code>// mumu下载地址：
-https://mumu.163.com/
-</code></pre>
+<h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><h3 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1. 安装环境"></a>1. <strong>安装环境</strong></h3><h5 id="分别配置nodejs-微信开发者工具环境"><a href="#分别配置nodejs-微信开发者工具环境" class="headerlink" title="分别配置nodejs + 微信开发者工具环境"></a>分别配置nodejs + 微信开发者工具环境</h5><pre class="line-numbers language-tex" data-language="tex"><code class="language-tex">&#x2F;&#x2F; nodejs下载地址：
+https:&#x2F;&#x2F;nodejs.org&#x2F;zh-cn&#x2F;download&#x2F;
+&#x2F;&#x2F; 微信开发者工具下载地址：
+https:&#x2F;&#x2F;developers.weixin.qq.com&#x2F;miniprogram&#x2F;dev&#x2F;devtools&#x2F;download.html<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="2-安装模拟器及相关程序"><a href="#2-安装模拟器及相关程序" class="headerlink" title="2. 安装模拟器及相关程序"></a>2. <strong>安装模拟器及相关程序</strong></h3><h5 id="反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。"><a href="#反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。" class="headerlink" title="反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。"></a>反编译须要获取小程序源文件。通过手机模拟器，可以在电脑上快速进行文件管理，同时便于设置root权限，操作更为方便。这里选用网易的mumu模拟器。</h5><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; mumu下载地址：
+https:&#x2F;&#x2F;mumu.163.com&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h5 id="下载安装后，须要安装微信和RE文件管理器，同时在应用程序右上角设置页面打开超级用户权限，用以后续获取小程序包。"><a href="#下载安装后，须要安装微信和RE文件管理器，同时在应用程序右上角设置页面打开超级用户权限，用以后续获取小程序包。" class="headerlink" title="下载安装后，须要安装微信和RE文件管理器，同时在应用程序右上角设置页面打开超级用户权限，用以后续获取小程序包。"></a>下载安装后，须要安装微信和RE文件管理器，同时在应用程序右上角设置页面打开超级用户权限，用以后续获取小程序包。</h5><center><img src="https://s1.ax1x.com/2022/03/19/qEOcxf.jpg" alt="qEOcxf.jpg" style="zoom: 100%;" /></center>
 
 <center><img src="https://s1.ax1x.com/2022/03/19/qEOsPI.jpg" alt="qEOsPI.jpg" style="zoom: 100%;" /></center>
@@ -184,9 +186,9 @@ https://mumu.163.com/
 <li><p>3.1 获取小程序包</p>
 <h5 id="在mumu模拟器中登录微信账号，打开所需要反编译的小程序。如图打开个人开发的小程序：韭等商城测试版。"><a href="#在mumu模拟器中登录微信账号，打开所需要反编译的小程序。如图打开个人开发的小程序：韭等商城测试版。" class="headerlink" title="在mumu模拟器中登录微信账号，打开所需要反编译的小程序。如图打开个人开发的小程序：韭等商城测试版。"></a>在mumu模拟器中登录微信账号，打开所需要反编译的小程序。如图打开个人开发的小程序：韭等商城测试版。</h5><h5 id="使用RE文件管理器，打开如下路径"><a href="#使用RE文件管理器，打开如下路径" class="headerlink" title="使用RE文件管理器，打开如下路径"></a>使用RE文件管理器，打开如下路径</h5></li>
 </ul>
-<pre><code>/data/data/com.tecent/mm/MicroMsg/......./appbrand/pkg
-//     （.......目录名通常为较长数字和字母组成）
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;data&#x2F;data&#x2F;com.tecent&#x2F;mm&#x2F;MicroMsg&#x2F;.......&#x2F;appbrand&#x2F;pkg
+&#x2F;&#x2F; 	（.......目录名通常为较长数字和字母组成）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <center><img src="https://s1.ax1x.com/2022/03/19/qEO6RP.jpg" alt="qEO6RP.jpg" style="zoom:100%;" /></center>
 
 <h5 id="在目录下可以发现众多-wxapkg文件，长按左键选中所有，在右上角点击压缩-微信无法发送程序包-并通过各种发送方式提取程序包至计算机。"><a href="#在目录下可以发现众多-wxapkg文件，长按左键选中所有，在右上角点击压缩-微信无法发送程序包-并通过各种发送方式提取程序包至计算机。" class="headerlink" title="在目录下可以发现众多.wxapkg文件，长按左键选中所有，在右上角点击压缩(微信无法发送程序包)并通过各种发送方式提取程序包至计算机。"></a>在目录下可以发现众多.wxapkg文件，长按左键选中所有，在右上角点击压缩(微信无法发送程序包)并通过各种发送方式提取程序包至计算机。</h5><center><img src="https://s1.ax1x.com/2022/03/19/qEOyGt.jpg" alt="qEOyGt.jpg" style="zoom:100%;" /></center>
@@ -196,8 +198,8 @@ https://mumu.163.com/
 <ul>
 <li><h4 id="3-2-反编译程序包"><a href="#3-2-反编译程序包" class="headerlink" title="3.2 反编译程序包"></a>3.2 反编译程序包</h4></li>
 </ul>
-<pre class=" language-shell"><code class="language-shell"># 1.下载反编译程序
-git clone https://gitee.com/ksd/wxappUnpacker.git
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 1.下载反编译程序
+git clone https:&#x2F;&#x2F;gitee.com&#x2F;ksd&#x2F;wxappUnpacker.git
 
 # 2.安装依赖
 cd wxappUnpacker
@@ -208,8 +210,8 @@ npm install css-tree
 npm install cssbeautify
 npm install vm2
 npm install uglify-es
-npm install js-beautify
-</code></pre>
+npm install js-beautify<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <center><img src="https://s1.ax1x.com/2022/03/19/qEORsS.jpg" alt="qEORsS.jpg" style="zoom:50%;" /></center>
 <center><img src="https://s1.ax1x.com/2022/03/19/qEOWqg.jpg" alt="qEOWqg.jpg" style="zoom:50%;" /></center>
 
@@ -217,8 +219,8 @@ npm install js-beautify
 
 <center><img src="https://s1.ax1x.com/2022/03/19/qEO5Is.jpg" alt="qEO5Is.jpg" style="zoom:50%;" /></center>
 
-<h5 id="反编译-wxapkg文件得到得到源码文件夹"><a href="#反编译-wxapkg文件得到得到源码文件夹" class="headerlink" title="反编译.wxapkg文件得到得到源码文件夹"></a>反编译.wxapkg文件得到得到源码文件夹</h5><pre class=" language-shell"><code class="language-shell">node wuWxapkg.js <file>
-</code></pre>
+<h5 id="反编译-wxapkg文件得到得到源码文件夹"><a href="#反编译-wxapkg文件得到得到源码文件夹" class="headerlink" title="反编译.wxapkg文件得到得到源码文件夹"></a>反编译.wxapkg文件得到得到源码文件夹</h5><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">node wuWxapkg.js &lt;file&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <center><img src="https://s1.ax1x.com/2022/03/19/qEO4aj.jpg" alt="qEO4aj.jpg" style="zoom:100%;" /></center>
 
 <h3 id="4-导入小程序"><a href="#4-导入小程序" class="headerlink" title="4. 导入小程序"></a>4. 导入小程序</h3><h5 id="使用微信开发者工具导入源码文件夹即可得到工程"><a href="#使用微信开发者工具导入源码文件夹即可得到工程" class="headerlink" title="使用微信开发者工具导入源码文件夹即可得到工程"></a>使用微信开发者工具导入源码文件夹即可得到工程</h5><center><img src="https://s1.ax1x.com/2022/03/19/qEOTGq.jpg" alt="qEOTGq.jpg" style="zoom:100%;" /></center>
@@ -232,11 +234,11 @@ npm install js-beautify
 </li>
 <li><h4 id="Resolve："><a href="#Resolve：" class="headerlink" title="Resolve："></a><strong>Resolve</strong>：</h4><h5 id="修wuWxss-js文件代码-line-2-x3D-gt-line-3-如下："><a href="#修wuWxss-js文件代码-line-2-x3D-gt-line-3-如下：" class="headerlink" title="修wuWxss.js文件代码( line.2 &#x3D;&gt; line.3 )如下："></a>修wuWxss.js文件代码( line.2 &#x3D;&gt; line.3 )如下：</h5></li>
 </ul>
-<pre class=" language-json"><code class="language-json">let vm = new VM(&amp;#<span class="token number">123</span><span class="token punctuation">;</span> sandbox<span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
-// pureData = vm.run(code + <span class="token string">"\n_C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-pureData = vm.run(code + <span class="token string">"&amp;#125;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console.log(<span class="token string">"Guess wxss(first turn)..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">let vm &#x3D; new VM(&#123; sandbox: &#123;&#125;&#125;)
+&#x2F;&#x2F; pureData &#x3D; vm.run(code + &quot;\n_C&quot;);
+pureData &#x3D; vm.run(code + &quot;&#125;&quot;);
+console.log(&quot;Guess wxss(first turn)...&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <hr>
 <h2 id="参考文档："><a href="#参考文档：" class="headerlink" title="参考文档："></a>参考文档：</h2><p><a target="_blank" rel="noopener" href="https://github.com/xuedingmiaojun/wxappUnpacker/issues/30">https://github.com/xuedingmiaojun/wxappUnpacker/issues/30</a></p>
 
