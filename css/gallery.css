@@ -1238,5 +1238,90 @@
 					transition-delay: 0.5s;
 					opacity: 1;
 				}
+// 颜色块-黄
+span#inline-yellow {
+display:inline;
+padding:.2em .6em .3em;
+font-size:90%;
+font-weight:normal;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0.1rem;
+background-color: #FFD700;
+}
+
+// 颜色块-绿
+span#inline-green {
+display:inline;
+padding:.2em .6em .3em;
+font-size:90%;
+font-weight:normal;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0.1rem;
+background-color: #5cb85c;
+}
+// 颜色块-蓝
+span#inline-blue {
+display:inline;
+padding:.2em .6em .3em;
+font-size:90%;
+font-weight:normal;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0.1rem;
+background-color: #2780e3;
+}
+// 颜色块-灰
+span#inline-grey {
+display:inline;
+padding:.2em .6em .3em;
+font-size:90%;
+font-weight:normal;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0.1rem;
+background-color: #4F4F4F;
+}
+// 颜色块-红
+span#inline-red {
+display:inline;
+padding:.2em .6em .3em;
+font-size:90%;
+font-weight:normal;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0.1rem;
+background-color: #FF3030;
+}
+// 颜色块-紫
+span#inline-purple {
+display:inline;
+padding:.2em .6em .3em;
+font-size:90%;
+font-weight:normal;
+line-height:1;
+color:#fff;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:0.1rem;
+background-color: #9954bb;
+}
 
 		}
