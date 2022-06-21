@@ -159,24 +159,97 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://lmichelin.fr/content/images/2019/05/5c1bb7dd5e7cc9678fcdc39f_Hello-World-Header.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Hello World</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://s1.ax1x.com/2022/06/21/Xz1j2t.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >基于知识图谱的医疗垂直领域多轮问答</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="总体设计"><a href="#总体设计" class="headerlink" title="总体设计"></a>总体设计</h1><ul>
+<li><input disabled="" type="checkbox"> ​    垂直领域知识图谱    归纳医疗诊断垂直领域问题-&gt;设计语义槽</li>
+<li><input disabled="" type="checkbox"> ​    单轮多轮对话 语义检索</li>
+</ul>
+<p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620100439994.png" alt="image-20220620100439994"></p>
+<ul>
+<li><input disabled="" type="checkbox"> ​    语义检索问答</li>
+</ul>
+<p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620100858471.png" alt="image-20220620100858471"></p>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+​    知识计算</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​    对话管理交互</p>
+</li>
+</ul>
+<hr>
+<h1 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h1><h2 id="1-基本知识"><a href="#1-基本知识" class="headerlink" title="1. 基本知识"></a>1. 基本知识</h2><ul>
+<li>基于图的数据结构</li>
+<li>节点（实体）+边（关系）</li>
+<li>&lt;实体，关系，实体&gt; or &lt;实体，属性，属性</li>
+</ul>
+<h2 id="2-schema定义"><a href="#2-schema定义" class="headerlink" title="2. schema定义"></a>2. schema定义</h2><p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620101503335.png" alt="image-20220620101503335"></p>
+<h2 id="3-环境配置"><a href="#3-环境配置" class="headerlink" title="3. 环境配置"></a>3. 环境配置</h2><table>
+<thead>
+<tr>
+<th><strong>link</strong></th>
+<th><strong>desc</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41873673/article/details/108027074">https://blog.csdn.net/qq_41873673/article/details/108027074</a></td>
+<td>jdk</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/huanxuwu/article/details/80785986">https://blog.csdn.net/huanxuwu/article/details/80785986</a></td>
+<td>neo4j</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40575457/article/details/81625169">https://blog.csdn.net/weixin_40575457/article/details/81625169</a></td>
+<td>jdk报错</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/59401605">https://zhuanlan.zhihu.com/p/59401605</a></td>
+<td>知识图谱</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1387695">https://cloud.tencent.com/developer/article/1387695</a></td>
+<td>python链接neo4j</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43788143/article/details/108388520">https://blog.csdn.net/weixin_43788143/article/details/108388520</a></td>
+<td>neo4j导入数据</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/neo4j/neo4j_building_blocks.html">https://www.w3cschool.cn/neo4j/neo4j_building_blocks.html</a></td>
+<td>cql语句</td>
+</tr>
+</tbody></table>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>​    命令行输入    -&gt;    登录（初始账号密码均为neo4j,初次登录可修改密码）    -&gt;    登录成功页</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">neo4j<span class="token punctuation">.</span>bat console<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620103032970.png" alt="image-20220620103032970"></p>
+<p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620103241554.png" alt="image-20220620103241554"></p>
+<p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620103409878.png" alt="image-20220620103409878"></p>
+<hr>
+<h1 id="x3D-x3D-知识图谱构建-x3D-x3D"><a href="#x3D-x3D-知识图谱构建-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;知识图谱构建&#x3D;&#x3D;"></a>&#x3D;&#x3D;知识图谱构建&#x3D;&#x3D;</h1><p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620170248833.png" alt="image-20220620170248833"></p>
+<ol>
+<li><h4 id="清空neo4j数据"><a href="#清空neo4j数据" class="headerlink" title="清空neo4j数据"></a>清空neo4j数据</h4><h5 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h5><pre class="line-numbers language-CQL" data-language="CQL"><code class="language-CQL">match (n) detach delete n<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h5><p><img src="C:\Users\程晓龙\AppData\Roaming\Typora\typora-user-images\image-20220620171342677.png" alt="image-20220620171342677"></p>
+</li>
+<li><h4 id="执行build-kg-utils-py-脚本"><a href="#执行build-kg-utils-py-脚本" class="headerlink" title="执行build_kg_utils.py 脚本"></a>执行build_kg_utils.py 脚本</h4><h5 id="程序入口"><a href="#程序入口" class="headerlink" title="程序入口"></a>程序入口</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    path <span class="token operator">=</span> <span class="token string">"./data/graph_data/medical.json"</span>
+    <span class="token comment">#print_data_info(path)</span>
+    extractor <span class="token operator">=</span> MedicalExtractor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    extractor<span class="token punctuation">.</span>extract_triples<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+    extractor<span class="token punctuation">.</span>create_entitys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    extractor<span class="token punctuation">.</span>create_relations<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    extractor<span class="token punctuation">.</span>set_diseases_attributes<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    extractor<span class="token punctuation">.</span>export_entitys_relations<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h4><h5 id="①-从-json医学垂直领域数据文件提取信息"><a href="#①-从-json医学垂直领域数据文件提取信息" class="headerlink" title="① 从.json医学垂直领域数据文件提取信息"></a>① 从.json医学垂直领域数据文件提取信息</h5><h5 id="②-构建-lt-实体-关系-属性-gt-三元组"><a href="#②-构建-lt-实体-关系-属性-gt-三元组" class="headerlink" title="② 构建 &lt; 实体, 关系, 属性 &gt; 三元组"></a>② 构建 &lt; 实体, 关系, 属性 &gt; 三元组</h5><h5 id="③-知识图谱映射-创建并设置节点-边"><a href="#③-知识图谱映射-创建并设置节点-边" class="headerlink" title="③ 知识图谱映射: 创建并设置节点+边"></a>③ 知识图谱映射: 创建并设置节点+边</h5><h5 id="④-连接并导出至neo4j"><a href="#④-连接并导出至neo4j" class="headerlink" title="④ 连接并导出至neo4j"></a>④ 连接并导出至neo4j</h5></li>
+</ol>
+<p><img src="C:\Users\程晓龙\Desktop\result.gif" alt="result"></p>
 
             </div>
 
@@ -239,8 +312,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2000/12/29/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2000/12/29/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/2022/06/18/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1+%E6%99%BA%E8%83%BD%E9%97%AE%E7%AD%94/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/06/18/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1+%E6%99%BA%E8%83%BD%E9%97%AE%E7%AD%94/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
