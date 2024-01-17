@@ -165,22 +165,24 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <h1 id="hexo-BLOG快速迁移"><a href="#hexo-BLOG快速迁移" class="headerlink" title="hexo-BLOG快速迁移"></a>hexo-BLOG快速迁移</h1><hr>
-<h2 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h2><p>1）&#x3D;&#x3D;进入官网地址下载安装包&#x3D;&#x3D;</p>
+<h2 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h2><p>1）进入官网地址下载安装包</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html">https://nodejs.org/zh-cn/download/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>2）&#x3D;&#x3D;安装程序&#x3D;&#x3D;</p>
-<p><img src="C:\Users\cxl\AppData\Roaming\Typora\typora-user-images\image-20240117170617130.png" alt="image-20240117170617130"></p>
-<p>3）&#x3D;&#x3D;测试安装是否成功&#x3D;&#x3D;</p>
+<p>2）安装程序</p>
+<center><img src="https://s11.ax1x.com/2024/01/17/pFkYEPU.png"></center>
+
+<p>3）测试安装是否成功</p>
 <p>按下【win+R】键，输入cmd，打开cmd窗口,成功显示版本说明安装成功</p>
-<p><img src="C:\Users\cxl\AppData\Roaming\Typora\typora-user-images\image-20240117170844877.png" alt="image-20240117170844877"></p>
-<p>4）&#x3D;&#x3D;环境配置&#x3D;&#x3D;</p>
+<center><img src="https://s11.ax1x.com/2024/01/17/pFkYKq1.png"></center>
+
+<p>4）环境配置</p>
 <p>在nodejs目录下新建文件夹【node_global】、【node_cache】</p>
 <p>在【node_global】目录下新建文件夹【node_modules】</p>
 <p>使用管理员身份打开cmd命令窗口，输入</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ npm config set prefix &quot;【node_global路径】&quot;
 $ npm config set cache &quot;【node_cache路径】&quot; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>5）&#x3D;&#x3D;配置环境变量&#x3D;&#x3D;</p>
+<p>5）配置环境变量</p>
 <ul>
 <li><p>【系统变量】-【新建】</p>
 <ul>
@@ -194,32 +196,30 @@ $ npm config set cache &quot;【node_cache路径】&quot; <span aria-hidden="tru
 </ul>
 </li>
 <li><p>【系统变量】-【PATH】-【编辑】-【新建】</p>
-<ul>
-<li>&#96;&#96;&#96;shell<br>%NODE_PATH%<pre class="line-numbers language-none"><code class="language-none">
-- 【确定&#x2F;应用】
-
-6）&#x3D;&#x3D;测试&#x3D;&#x3D;
-
-配置完成后，全局安装最常用的 express 模块进行测试
-
-&#96;&#96;&#96;shell
-$ npm install express -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">%NODE_PATH%<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>【确定&#x2F;应用】</p>
 </li>
 </ul>
+<p>6）测试</p>
+<p>配置完成后，全局安装最常用的 express 模块进行测试</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ npm install express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>成功则安装完成</p>
-<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><p>1）&#x3D;&#x3D;生成ssh-key&#x3D;&#x3D;</p>
+<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><p>1）生成ssh-key</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ git config --global user.name &quot;***&quot;
 $ git config --global user.email &quot;********@**.com&quot;
 $ ssh-keygen -t rsa -C &quot;********@**.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>2）&#x3D;&#x3D;获取ssh-key公钥内容&#x3D;&#x3D;</p>
+<p>2）获取ssh-key公钥内容</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ cd ~&#x2F;.ssh
 $ cat id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>复制文本内容</p>
-<p>3)&#x3D;&#x3D;GitHub上添加公钥&#x3D;&#x3D;</p>
-<p>4）&#x3D;&#x3D;验证&#x3D;&#x3D;</p>
+<ol start="3">
+<li>GitHub上添加公钥</li>
+</ol>
+<p>4）验证</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>显示欢迎信息说明配置成功，即可不需账号密码clone&#x2F;push代码</p>
@@ -240,8 +240,8 @@ $ ssh -T git@github.com
 Hi xxxxx! You&#39;ve successfully authenticated, but GitHub does not
 provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="拷贝博客文件"><a href="#拷贝博客文件" class="headerlink" title="拷贝博客文件"></a>拷贝博客文件</h2><p>1）&#x3D;&#x3D;拷贝&#x3D;&#x3D;</p>
-<p>2）&#x3D;&#x3D;安装&#x3D;&#x3D;</p>
+<h2 id="拷贝博客文件"><a href="#拷贝博客文件" class="headerlink" title="拷贝博客文件"></a>拷贝博客文件</h2><p>1）拷贝</p>
+<p>2）安装</p>
 <ul>
 <li>使用git bash 进入拷贝文件夹：</li>
 <li>执行如下命令<ul>
@@ -256,7 +256,7 @@ $ npm install
 $ npm install hexo-deployer-git --save
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>3）&#x3D;&#x3D;测试&#x3D;&#x3D;</p>
+<p>3）测试</p>
 <p>创建新博客，并测试是否成功</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ hexo new &quot;myNewTestBlog&quot;
 $ hexo g
