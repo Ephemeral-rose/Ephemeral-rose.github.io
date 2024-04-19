@@ -185,8 +185,8 @@
 <p>在nodejs目录下新建文件夹【node_global】、【node_cache】</p>
 <p>在【node_global】目录下新建文件夹【node_modules】</p>
 <p>使用管理员身份打开cmd命令窗口，输入</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ npm config set prefix &quot;【node_global路径】&quot;
-$ npm config set cache &quot;【node_cache路径】&quot; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">npm</span> config <span class="token builtin class-name">set</span> prefix <span class="token string">"【node_global路径】"</span>
+$ <span class="token function">npm</span> config <span class="token builtin class-name">set</span> cache <span class="token string">"【node_cache路径】"</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>5）配置环境变量</p>
 <ul>
@@ -209,41 +209,41 @@ $ npm config set cache &quot;【node_cache路径】&quot; <span aria-hidden="tru
 </ul>
 <p>6）测试</p>
 <p>配置完成后，全局安装最常用的 express 模块进行测试</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ npm install express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">npm</span> <span class="token function">install</span> express -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>成功则安装完成</p>
 <h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><p>1）生成ssh-key</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ git config --global user.name &quot;***&quot;
-$ git config --global user.email &quot;********@**.com&quot;
-$ ssh-keygen -t rsa -C &quot;********@**.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">git</span> config --global user.name <span class="token string">"***"</span>
+$ <span class="token function">git</span> config --global user.email <span class="token string">"********@**.com"</span>
+$ ssh-keygen -t rsa -C <span class="token string">"********@**.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>2）获取ssh-key公钥内容</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ cd ~&#x2F;.ssh
-$ cat id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> ~/.ssh
+$ <span class="token function">cat</span> id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>复制文本内容</p>
 <ol start="3">
 <li>GitHub上添加公钥</li>
 </ol>
 <p>4）验证</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">ssh</span> -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>显示欢迎信息说明配置成功，即可不需账号密码clone&#x2F;push代码</p>
 <ul>
 <li>可能出现如下错误</li>
 </ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ssh: connect to host github.com port 22: Connection refused<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ssh: connect to <span class="token function">host</span> github.com port <span class="token number">22</span>: Connection refused<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>maybe22端口可能被防火墙屏蔽（学校网络屏蔽22端口），可以尝试连接443端口</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ vim ~&#x2F;.ssh&#x2F;config
-&#96;&#96;&#96;
-# Add section below to it
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">vim</span> ~/.ssh/config
+``<span class="token variable"><span class="token variable">`</span>
+<span class="token comment"># Add section below to it</span>
 Host github.com
   Hostname ssh.github.com
-  Port 443
-&#96;&#96;&#96;
-$ ssh -T git@github.com
-Hi xxxxx! You&#39;ve successfully authenticated, but GitHub does not
+  Port <span class="token number">443</span>
+<span class="token variable">`</span></span>``
+$ <span class="token function">ssh</span> -T git@github.com
+Hi xxxxx<span class="token operator">!</span> You've successfully authenticated, but GitHub does not
 provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="拷贝博客文件"><a href="#拷贝博客文件" class="headerlink" title="拷贝博客文件"></a>拷贝博客文件</h2><p>1）拷贝</p>
@@ -257,17 +257,17 @@ provide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></
 </ul>
 </li>
 </ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ npm install hexo-cli -g
-$ npm install
-$ npm install hexo-deployer-git --save
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g
+$ <span class="token function">npm</span> <span class="token function">install</span>
+$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>3）测试</p>
 <p>创建新博客，并测试是否成功</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ hexo new &quot;myNewTestBlog&quot;
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ hexo new <span class="token string">"myNewTestBlog"</span>
 $ hexo g
 $ hexo s
-$ hexo d  		&#x2F;&#x2F; 部署至云端<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+$ hexo d  		// 部署至云端<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             </div>
